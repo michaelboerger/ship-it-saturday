@@ -1,5 +1,9 @@
 class Inventory
-  def hat
 
+  def initializer (hat)
+    @hat = hat
   end
+
+attr_accessor :hat
+
 end
