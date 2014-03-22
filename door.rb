@@ -45,8 +45,12 @@ class Door < Area
             puts "You have let everyone down this day.\n"
             puts 'BAD END.'
             return End.new(@player)
+        elsif choice == 'forest'
+            return Forest.new(@player)
         else
             puts "YOU ARE BAD AT GAMES\n"
+            wait
+            puts "TYPE THE NUMBER OF YOUR CHOICE\n"
             wait
         end
 
