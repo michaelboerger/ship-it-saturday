@@ -1,9 +1,9 @@
 class Inventory
 
   def initialize
-    @hat = false
+    @hat? = false
   end
 
-  attr_accessor :hat
+  attr_accessor :hat?
 
 end
