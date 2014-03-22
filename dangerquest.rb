@@ -4,6 +4,7 @@ require_relative 'player'
 require_relative 'inventory'
 require_relative 'door'
 require_relative 'river'
+require_relative 'forest'
 
 def wait(seconds=1)
     sleep(seconds)

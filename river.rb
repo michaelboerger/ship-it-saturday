@@ -8,13 +8,45 @@ class River < Area
 
     def check_command(choice)
         if choice == '1'
+            #this is so uuuuuugly
+            puts "       O\n      /|\\\n/\\/\\/\\/\\/\\/\\/\\/\\"
+            sleep(0.5)
+            clear
+            puts "       O\n      /|\\\n\\/\\/\\/\\/\\/\\/\\/\\/"
+            sleep(0.5)
+            clear
+            puts "       O\n      /|\\\n/\\/\\/\\/\\/\\/\\/\\/\\"
+            sleep(0.5)
+            clear
+            puts "       O\n      /|\\\n\\/\\/\\/\\/\\/\\/\\/\\/"
+            sleep(0.5)
+            clear
+            puts "       O\n      /|\\\n/\\/\\/\\/\\/\\/\\/\\/\\"
+            sleep(0.5)
+            clear
+            puts "\n      \\O/\n\\/\\/\\/\\/\\/\\/\\/\\/"
+            sleep(0.5)
+            clear
+            puts "\n      \\O/\n/\\/\\/\\/\\/\\/\\/\\/\\"
+            sleep(0.5)
+            clear
+            puts "\n      \\O/\n\\/\\/\\/\\/\\/\\/\\/\\/"
+            sleep(0.5)
+            clear
+            puts "\n\n/\\/\\/\\/\\/\\/\\/\\/\\"
+            sleep(0.5)
+            clear
+            puts "\n\n\\/\\/\\/\\/\\/\\/\\/\\/"
+            sleep(0.5)
+            clear
+
             puts "The river is too deep to ford.\n\n"
             wait
             puts "You lose:\n102 Bullets, 3 Oxen, 1 Wagon Axel\n\n"
             wait(5)
             puts 'Also you died'
             wait
-            puts 'Good effort though!'
+            puts "\nGood effort."
             return End.new(@player)
         elsif choice == '2'
             puts 'You don\'t have a wagon.'
@@ -48,8 +80,9 @@ class River < Area
               clear
             end
           end
-          puts 'YOU WIN'
-          return End.new(@player)
+          puts "THANKS FISH"
+          wait
+          return Forest.new(@player)
         elsif choice == '4'
             puts "They don't.\n\n"
             wait

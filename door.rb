@@ -24,7 +24,7 @@ class Door < Area
                 puts "*BONK*\n\n"
                 wait
                 puts "You have walked face first into the door, mistakes have been made\n"
-                wait(10)
+                wait(3)
             end
         elsif choice == '2'
             if @player.inventory.hat
