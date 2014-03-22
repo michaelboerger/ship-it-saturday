@@ -1,31 +1,52 @@
 require_relative 'inventory'
 stuff = Inventory.new
 
+def wait
+  sleep(1)
+end
+
+def clear
+  puts "\e[H\e[2J"
+end
+
 def doorarrive (stuff)
-  if stuff.hat?
-    puts 'You are at a door. The door says "Hats Wearers Only!" (with a sign, this door cannot talk). You see a hat on the ground'
-    puts "What do you want to do? \n1. Go door\n2. Think fondly back on the time you picked up a hat\n3. Quit"
-    choice = gets.chomp
-    door(stuff, choice)
+  if stuff.hat
+    puts "You are at a door that says, \"Hats Wearers Only!\"\n(The door still cannot talk but it looks pleased with your hat).\nYou also see a spot that reminds you of the first time you met your hat"
+    puts "What would you like to do? \n1. Go door\n2. Think fondly back on the time you picked up a hat\n3. Quit"
   else
-    puts 'You are at a door. The door says "Hats Wearers Only!" (with a sign, this door cannot talk). You see a hat on the ground'
-    puts "What do you want to do? \n1. Go door\n2. Pick hat\n3. Quit"
-    choice = gets.chomp
-    door(stuff, choice)
+    puts "You are at a door that says, \"Hats Wearers Only!\"\n(There is a sign on the door, it is not a talking door).\nYou also see a hat on the ground"
+    puts "What would you like to do? \n1. Go door\n2. Get that hat\n3. Quit"
   end
+  choice = gets.chomp
+  clear
+  door(stuff, choice)
 end
 
 def door (stuff, choice)
   if choice == '1'
-    puts 'You went in a door, good going'
-      if stuff.hat?
-        puts "YOU GOT A HAT, YOU PASSED THE DOOR CHALLENGE"
+    puts 'You bravely step forward into the door, ready to face the dangers within'
+    wait
+      if stuff.hat
+        puts "YOU PASSED THE DOOR CHALLENGE"
       else
-        puts "You hatless jerk, the door is not pleased"
+        puts "You approach the unopened door, your adventurous spirit undaunted by it being closed."
+        wait
+        wait
+        wait
+        puts "*BONK*"
+        puts "You walk face first into the door, mistakes have been made"
       end
   elsif choice == '2'
-    puts 'Nice hat hot shot!'
-    stuff.hat? = true
+    if stuff.hat
+      puts '<3<3<3HAT<3<3<3'
+      wait
+    else
+      puts 'You are now wearing a hat you found on the ground! Good going!'
+      puts 'The door opens!'
+      stuff.hat = true
+      wait
+    end
+    wait
     doorarrive(stuff)
   elsif choice == '3'
     puts 'You don\'t have the spirit of adventure in your heart and have let everyone down this day. BAD END.'
