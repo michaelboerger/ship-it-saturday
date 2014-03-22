@@ -1,5 +1,3 @@
-
-
 puts 'WELCOME TO DANGER QUEST'
 sleep(1.5)
 puts 'Enter your name to generate an appropriately heroic version of yourself'
