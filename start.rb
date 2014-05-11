@@ -11,7 +11,6 @@ sleep(1.5)
 puts 'Accessing webcam to capture likeness...'
 sleep(1.5)
 puts 'Generating graphical representation...'
-sleep(1.5)
-puts 'You are MICHAEL THE ADVENTURER!'
+sleep(3.0)
+puts 'You are ADAM THE ADVENTURER!'
 puts "    O\n   /|\\\n    |\n   / \\"
-
